@@ -24,12 +24,12 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
-          <SearchBar
+          {/* <SearchBar
             round
             lightTheme
             showLoading
             cancelButtonTitle="Cancel"
-            placeholder='Type Here...' />
+            placeholder='Type Here...' /> */}
 
         </ScrollView>
       </View>

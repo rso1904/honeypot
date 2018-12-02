@@ -4,8 +4,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import WriteScreen from '../screens/WriteScreen';
+import CommunityScreen from '../screens/CommunityScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -25,12 +25,12 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const WriteStack = createStackNavigator({
+  Write: WriteScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+WriteStack.navigationOptions = {
+  tabBarLabel: 'Write',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -39,12 +39,12 @@ LinksStack.navigationOptions = {
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const CommunityStack = createStackNavigator({
+  Community: CommunityScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+CommunityStack.navigationOptions = {
+  tabBarLabel: 'Commnity',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -55,6 +55,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  WriteStack,
+  CommunityStack,
 });
